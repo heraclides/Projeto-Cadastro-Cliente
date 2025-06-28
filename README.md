@@ -38,9 +38,8 @@ Projeto ASP.NET Core MVC desenvolvido para gerenciamento de clientes e fornecedo
 ### Etapas:
 
 1. **Clone o repositório:**
-
-```bash
-git clone https://github.com/seu-usuario/LHPet.git
+   
+git clone https://github.com/seu-usuario/LHPet.git](https://github.com/heraclides/Projeto-Cadastro-Cliente.git)
 acesse a pasta do projeto abra o cmd e digite
 cd LHPet
 Configure a string de conexão no arquivo appsettings.json:
