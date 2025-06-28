@@ -1,0 +1,23 @@
+@model LHPet.Models.Cliente
+<h2>Cadastrar Cliente</h2>
+
+<form asp-action="CreateCliente" method="post">
+    <div>
+        <label>Nome</label>
+        <input asp-for="Nome" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>CPF</label>
+        <input asp-for="Cpf" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Paciente</label>
+        <input asp-for="Paciente" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success mt-3">Salvar</button>
+</form>

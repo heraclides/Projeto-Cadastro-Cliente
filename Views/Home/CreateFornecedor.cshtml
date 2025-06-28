@@ -1,0 +1,19 @@
+@model LHPet.Models.Fornecedor
+
+<h2>Cadastrar Fornecedor</h2>
+
+<form asp-action="CreateFornecedor" method="post">
+    <div class="mb-3">
+        <label>Nome</label>
+        <input asp-for="Nome" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>CNPJ</label>
+        <input asp-for="Cnpj" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+</form>

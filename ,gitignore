@@ -1,0 +1,45 @@
+# Compilação
+bin/
+obj/
+*.user
+*.suo
+
+# Publicação
+publish/
+out/
+
+# Logs
+*.log
+
+# VSCode / Visual Studio
+.vscode/
+*.vs/
+*.dbmdl
+
+# Dados de build
+*.db
+*.bak
+*.sql
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.cache
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ambiente local
+.env
+
+# Configuração do Rider ou JetBrains
+.idea/
+*.sln.iml
+
+# Migrations binárias (não obrigatórias, só o .cs é necessário)
+Migrations/*.Designer.cs
+Migrations/*.csproj
+
+# Outros
+wwwroot/lib/

@@ -1,0 +1,119 @@
+﻿@{
+    ViewData["Title"] = "Página Inicial";
+    var clientes = ViewBag.listaClientes as List<LHPet.Models.Cliente>;
+    var fornecedores = ViewBag.listaFornecedores as List<LHPet.Models.Fornecedor>;
+}
+
+<style>
+    .fade {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+    }
+
+    .fade.show {
+        opacity: 1;
+    }
+
+    .placeholder-area {
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #888;
+        font-size: 1.5rem;
+    }
+
+</style>
+
+<h2 class="mb-4">Bem-vindo ao LHPet!</h2>
+
+<div class="mb-4">
+    <button class="btn btn-outline-success me-2" onclick="mostrar('clientes')">Visualizar Clientes</button>
+    <button class="btn btn-outline-primary me-2" onclick="mostrar('fornecedores')">Visualizar Fornecedores</button>
+    <button class="btn btn-outline-secondary" onclick="ocultar()">Ocultar</button>
+</div>
+
+<div id="areaPrincipal" class="placeholder-area">
+    Clique em um botão acima para visualizar os dados.
+</div>
+
+<div id="tabelaClientes" class="fade">
+    <h3>Clientes</h3>
+    <table class="table table-bordered">
+        <thead class="table-success">
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Email</th>
+                <th>Paciente</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cliente in clientes!)
+            {
+                <tr>
+                    <td>@cliente.Id</td>
+                    <td>@cliente.Nome</td>
+                    <td>@cliente.Cpf</td>
+                    <td>@cliente.Email</td>
+                    <td>@cliente.Paciente</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div id="tabelaFornecedores" class="fade">
+    <h3>Fornecedores</h3>
+    <table class="table table-bordered">
+        <thead class="table-primary">
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>CNPJ</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var fornecedor in fornecedores!)
+            {
+                <tr>
+                    <td>@fornecedor.Id</td>
+                    <td>@fornecedor.Nome</td>
+                    <td>@fornecedor.Cnpj</td>
+                    <td>@fornecedor.Email</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script>
+        function mostrar(tipo) {
+            ocultar(); // esconde tudo antes
+            document.getElementById("areaPrincipal").style.display = "none";
+
+            if (tipo === 'clientes') {
+                let el = document.getElementById("tabelaClientes");
+                el.classList.add("show");
+                el.style.display = "block";
+            }
+            if (tipo === 'fornecedores') {
+                let el = document.getElementById("tabelaFornecedores");
+                el.classList.add("show");
+                el.style.display = "block";
+            }
+        }
+
+        function ocultar() {
+            document.getElementById("tabelaClientes").style.display = "none";
+            document.getElementById("tabelaFornecedores").style.display = "none";
+            document.getElementById("tabelaClientes").classList.remove("show");
+            document.getElementById("tabelaFornecedores").classList.remove("show");
+
+            document.getElementById("areaPrincipal").style.display = "flex";
+        }
+    </script>
+}
