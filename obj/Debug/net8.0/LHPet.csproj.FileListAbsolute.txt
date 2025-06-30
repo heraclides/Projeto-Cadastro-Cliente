@@ -166,3 +166,4 @@ E:\cursos\fullStack\projetos\Atividade3\MVC\LHPet\bin\Debug\net8.0\runtimes\brow
 E:\cursos\fullStack\projetos\Atividade3\MVC\LHPet\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 E:\cursos\fullStack\projetos\Atividade3\MVC\LHPet\obj\Debug\net8.0\LHPet.csproj.AssemblyReference.cache
 E:\cursos\fullStack\projetos\Atividade3\MVC\LHPet\obj\Debug\net8.0\LHPet.csproj.Up2Date
+E:\cursos\fullStack\projetos\Atividade3\MVC\LHPet\obj\Debug\net8.0\LHPet.sourcelink.json
